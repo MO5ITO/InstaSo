@@ -14,9 +14,9 @@ import postRoutes from "./routes/posts.routes.js";
 import { createPost } from "./controllers/posts.controllers.js"
 import { register } from "./controllers/auth.controllers.js";
 import { verifyToken } from "./middleware/auth.middleware.js";
-// import User from "./models/user.model.js";
-// import Post from "./models/post.model.js";
-// import { users, posts } from "./data/index.js";
+import User from "./models/user.model.js";
+import Post from "./models/post.model.js";
+import { users, posts } from "./data/index.js";
 
 /* CONFIG */
 
@@ -36,7 +36,6 @@ app.use(cors());
 app.use("assets",express.static(path.join(__dirname,'public/assets')));
 
 /* File Storage */
-
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, "public/assets");
@@ -61,7 +60,7 @@ mongoose
     // User.insertMany(users);
     // Post.insertMany(posts);
   })
-  .catch((error) => console.log(`⛔ ⛔ ${error} did not connect ⛔ ⛔`));
+  .catch((error) => console.log(`⛔⛔ ${error} did not connect ⛔⛔`));
 
 /* ROUTES WITH FILES */
 app.post("/auth/register", upload.single("picture"), register);
