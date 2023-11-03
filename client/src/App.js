@@ -1,20 +1,23 @@
-import logo from './assets/logo.png'
-import './App.css';
+import { Navigate, Routes, Route } from "react-router-dom";
+import NavBar from './Views/NavBar/index.jsx';
+import LoginPage from "./Views/LoginPage/index.jsx";
+import HomePage from "./Views/HomePage/index.jsx";
+import ProfilePage from "./Views/ProfilePage/index.jsx";
+import PageNotFound from "./Views/Widgets/PageNotFound.jsx";
 
 function App() {
   return (
-    <div className="App">
-      <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid">
-            <img src={logo} alt="logoInstaSo" class="d-inline-block align-text-top logoNav"/>
-        
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-        </div>
-      </nav>
-      
+    <div>
+
+      <NavBar/>
+      <Routes>
+        <Route path="/" element={<LoginPage/>} /> 
+        <Route path="/home" element={<HomePage/>} />
+        <Route path="/profile/:userId" element={<ProfilePage/>} />  
+        <Route path="*" element={<PageNotFound/>} /> 
+      </Routes>
+
+
     </div>
   );
 }
