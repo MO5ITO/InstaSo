@@ -4,7 +4,7 @@ import { Box, IconButton, InputBase, Typography, Select, MenuItem, FormControl, 
 import { Search, Message, DarkMode, LightMode, Notifications, Help, Menu, Close, } from "@mui/icons-material";
 import { useDispatch, useSelector } from "react-redux";
 import { setMode, setLogout } from "../../State/index.js";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import FlexBetween from "../../Components/FlexBetween.jsx";
 
 
@@ -31,7 +31,7 @@ const NavBar = () => {
 
     <FlexBetween padding="1rem 6%" backgroundColor={alt}>
       <FlexBetween gap="1.75rem">
-      <img src={logo} alt="logoInstaSo" class="d-inline-block align-text-top logoNav"/>
+      <Link to={"/"}> <img src={logo} alt="logoInstaSo" class="d-inline-block align-text-top logoNav"/></Link>
         {isNonMobileScreens && (
           <FlexBetween
             backgroundColor={neutralLight}
