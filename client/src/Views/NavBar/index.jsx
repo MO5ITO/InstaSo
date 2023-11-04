@@ -4,7 +4,7 @@ import { Box, IconButton, InputBase, Typography, Select, MenuItem, FormControl, 
 import { Search, Message, DarkMode, LightMode, Notifications, Help, Menu, Close, } from "@mui/icons-material";
 import { useDispatch, useSelector } from "react-redux";
 import { setMode, setLogout } from "../../State/index.js";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import FlexBetween from "../../Components/FlexBetween.jsx";
 
 
@@ -12,7 +12,6 @@ const NavBar = () => {
 
   const [isMobileMenuToggled, setIsMobileMenuToggled] = useState(false);
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   const user = useSelector((state) => state.user);
   const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
 
