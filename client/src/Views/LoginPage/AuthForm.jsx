@@ -1,5 +1,7 @@
 import { useState } from "react";
-import {  Box, Button, TextField, useMediaQuery, Typography, useTheme, } from "@mui/material";
+import {  Box, Button, TextField, useMediaQuery, Typography, useTheme} from "@mui/material";
+import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
+import CheckCircleSharpIcon from '@mui/icons-material/CheckCircleSharp';
 import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 import { Formik } from "formik";
 import * as yup from "yup";
@@ -10,18 +12,18 @@ import Dropzone from "react-dropzone";
 import FlexBetween from "../../Components/FlexBetween";
 
 const registerSchema = yup.object().shape({
-    firstName: yup.string().required("firstName is required"),
-    lastName: yup.string().required("required"),
-    email: yup.string().email("invalid email").required("required"),
-    password: yup.string().required("required"),
-    location: yup.string().required("required"),
-    occupation: yup.string().required("required"),
-    picture: yup.string().required("required"),
+    firstName: yup.string().required("First Name is required"),
+    lastName: yup.string().required("Last Name is required"),
+    email: yup.string().email("invalid email").required("Email Adress is required"),
+    password: yup.string().required("Password is required"),
+    location: yup.string().required("Location is required"),
+    occupation: yup.string().required("Occupation is required"),
+    picture: yup.string().required("Picture is required"),
   });
   
   const loginSchema = yup.object().shape({
-    email: yup.string().email("invalid email").required("required"),
-    password: yup.string().required("required"),
+    email: yup.string().email("invalid email").required("Email is required"),
+    password: yup.string().required("Password is required"),
   });
 
   const initialValuesRegister = {
@@ -168,6 +170,7 @@ const registerSchema = yup.object().shape({
                   />
                   <Box
                     gridColumn="span 4"
+                    textAlign="center"
                     border={`1px solid ${palette.neutral.medium}`}
                     borderRadius="5px"
                     p="1rem"
@@ -183,15 +186,16 @@ const registerSchema = yup.object().shape({
                         <Box
                           {...getRootProps()}
                           border={`2px dashed ${palette.primary.main}`}
-                          p="1rem"
+                          borderRadius="15px"
+                          p="15px"
                           sx={{ "&:hover": { cursor: "pointer" } }}
                         >
                           <input {...getInputProps()} />
                           {!values.picture ? (
-                            <p>Add Picture Here</p>
+                            <Typography> <AddPhotoAlternateIcon  sx={{ fontSize: 40 }}/> Add Your Profile Picture 🤗</Typography>
                           ) : (
                             <FlexBetween>
-                              <Typography>{values.picture.name}</Typography>
+                              <Typography><CheckCircleSharpIcon sx={{ fontSize: 30 }} htmlColor={palette.primary.main}/> You Are Choose This Picture Name : {values.picture.name}</Typography>
                               <EditOutlinedIcon />
                             </FlexBetween>
                           )}
