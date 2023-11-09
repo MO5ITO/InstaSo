@@ -10,6 +10,7 @@ import { useDispatch } from "react-redux";
 import { setLogin } from "State";
 import Dropzone from "react-dropzone";
 import FlexBetween from "../../Components/FlexBetween";
+import loginImg from "../../Assets/loginRegister.jpg"
 
 const registerSchema = yup.object().shape({
     firstName: yup.string().required("First Name is required"),
@@ -98,7 +99,17 @@ const registerSchema = yup.object().shape({
     };
   
     return (
-      <Formik
+        
+        <section className="vh-100">
+        <div className="container py-5 h-100">
+          <div className="row d-flex align-items-center justify-content-center h-100">
+            <div className="col-md-8 col-lg-7 col-xl-6">
+              <img src={loginImg}
+                className="img-fluid" alt="Login Img"/>
+            </div>
+            <div className="col-md-8 col-lg-5 col-xl-5 offset-xl-1">
+
+            <Formik
         onSubmit={handleFormSubmit}
         initialValues={isLogin ? initialValuesLogin : initialValuesRegister}
         validationSchema={isLogin ? loginSchema : registerSchema}
@@ -116,7 +127,7 @@ const registerSchema = yup.object().shape({
           <form onSubmit={handleSubmit}>
             <Box
               display="grid"
-              gap="30px"
+              gap="20px"
               gridTemplateColumns="repeat(4, minmax(0, 1fr))"
               sx={{
                 "& > div": { gridColumn: isNonMobile ? undefined : "span 4" },
@@ -266,6 +277,12 @@ const registerSchema = yup.object().shape({
           </form>
         )}
       </Formik>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
     );
   };
 

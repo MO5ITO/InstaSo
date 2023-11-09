@@ -30,7 +30,7 @@ const NavBar = () => {
 
     <FlexBetween padding="1rem 6%" backgroundColor={alt}>
       <FlexBetween gap="1.75rem">
-      <Link to={"/"}> <img src={logo} alt="logoInstaSo" class="d-inline-block align-text-top logoNav"/></Link>
+      <Link to={"/"}> <img src={logo} alt="logoInstaSo" className="d-inline-block align-text-top logoNav"/></Link>
         {isNonMobileScreens && (
           <FlexBetween
             backgroundColor={neutralLight}
