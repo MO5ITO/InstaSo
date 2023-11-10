@@ -2,7 +2,7 @@ import React from 'react'
 
 const UserWidget = () => {
   return (
-    <div>User Widget</div>
+    <div>User Widget Box</div>
   )
 }
 
