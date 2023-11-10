@@ -100,9 +100,9 @@ const registerSchema = yup.object().shape({
   
     return (
         
-        <section className="vh-100">
-        <div className="container py-5 h-100">
-          <div className="row d-flex align-items-center justify-content-center h-100">
+        <section>
+        <div className="container py-5">
+          <div className="row d-flex align-items-center justify-content-center">
             <div className="col-md-8 col-lg-7 col-xl-6">
               <img src={loginImg}
                 className="img-fluid" alt="Login Img"/>
