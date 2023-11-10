@@ -10,7 +10,7 @@ const HomePage = () => {
   return (
     <Box>
       <NavBar/>
-      <Box width={isNonMobileScreens ? "70%" : "93%"} p="2rem" m="2rem auto" borderRadius="1.5rem" backgroundColor={theme.palette.background.alt} >
+      <Box width={isNonMobileScreens ? "50%" : "93%"} p="2rem" m="2rem auto" borderRadius="1.5rem" backgroundColor={theme.palette.background.alt} >
         <Typography fontWeight="500" textAlign="center" variant="h5" sx={{ mb: "1.5rem" }}>
           NstaSo! Home Page
         </Typography>
