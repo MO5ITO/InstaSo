@@ -4,7 +4,7 @@ import { verifyToken } from "../middleware/auth.middleware.js";
 
 const router = express.Router();
 
-/* FIND */
+/* FIND User */
 router.get("/", verifyToken, getFeedPosts);
 router.get("/:userId/posts", verifyToken, getUserPosts);
 
