@@ -1,5 +1,6 @@
 import { Box, Typography, useTheme, useMediaQuery } from "@mui/material";
 import NavBar from 'Views/NavBar'
+import UserWidget from "Views/Widgets/UserWidget";
 import React from 'react'
 
 const HomePage = () => {
@@ -14,7 +15,9 @@ const HomePage = () => {
         <Typography fontWeight="500" textAlign="center" variant="h5" sx={{ mb: "1.5rem" }}>
           NstaSo! Home Page
         </Typography>
+        <UserWidget/>
         </Box>
+
     </Box>
   )
 }
