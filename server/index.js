@@ -48,8 +48,9 @@ const storage = multer.diskStorage({
 
   /* MONGOOSE SETUP */
   const PORT = process.env.PORT || 6001;
-  const dbName = process.env.DB
-  mongoose.connect(`mongodb://127.0.0.1:27017/${dbName}`)
+  const dbName = process.env.DB;
+  // mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true, }) //Connect Cloud Mongoose
+  mongoose.connect(`mongodb://127.0.0.1:27017/${dbName}`) //Connect Local Mongoose Atlas
   .then(() => {
     app.listen(PORT, () => console.log(`✅ ✅ Server Port: ${PORT} ✅ ✅`));
 
