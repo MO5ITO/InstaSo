@@ -57,7 +57,7 @@ const storage = multer.diskStorage({
     // User.insertMany(users);
     // Post.insertMany(posts);
   })
-  .catch((error) => console.log(`⛔⛔ ${error} did not connect ⛔⛔`));
+  .catch((error) => console.log(`⛔⛔ ${error} not connect ⛔⛔`));
 
 /* ROUTES WITH FILES */
 app.post("/auth/register", upload.single("picture"), register);
