@@ -14,6 +14,7 @@ const NavBar = () => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user);
   const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
+  
 
   const theme = useTheme();
   const neutralLight = theme.palette.neutral.light;
@@ -22,7 +23,7 @@ const NavBar = () => {
   const primaryLight = theme.palette.primary.light;
   const alt = theme.palette.background.alt;
 
-  // const fullName = `${user.firstName} ${user.lastName}`;
+  const fullName = `${user.firstName} ${user.lastName}`;
 
 
   return (
@@ -59,9 +60,9 @@ const NavBar = () => {
           <Message sx={{ fontSize: "25px" }} />
           <Notifications sx={{ fontSize: "25px" }} />
           <Help sx={{ fontSize: "25px" }} />
-          <FormControl variant="standard" value="fullName">
+          <FormControl variant="standard" value={fullName}>
             <Select
-              value="fullName"
+              value={fullName}
               sx={{
                 backgroundColor: neutralLight,
                 width: "150px",
@@ -77,8 +78,8 @@ const NavBar = () => {
               }}
               input={<InputBase />}
             >
-              <MenuItem value="fullName">
-                <Typography>"fullName"</Typography>
+              <MenuItem value={fullName}>
+                <Typography>{fullName}</Typography>
               </MenuItem>
               <MenuItem onClick={() => dispatch(setLogout())}>Log Out</MenuItem>
             </Select>
@@ -134,9 +135,9 @@ const NavBar = () => {
             <Message sx={{ fontSize: "25px" }} />
             <Notifications sx={{ fontSize: "25px" }} />
             <Help sx={{ fontSize: "25px" }} />
-            <FormControl variant="standard" value="fullName">
+            <FormControl variant="standard" value={fullName}>
               <Select
-                value="fullName"
+                value={fullName}
                 sx={{
                   backgroundColor: neutralLight,
                   width: "150px",
@@ -152,8 +153,8 @@ const NavBar = () => {
                 }}
                 input={<InputBase />}
               >
-                <MenuItem value="fullName">
-                  <Typography>"fullName"</Typography>
+                <MenuItem value={fullName}>
+                  <Typography>{fullName}</Typography>
                 </MenuItem>
                 <MenuItem onClick={() => dispatch(setLogout())}>
                   Log Out

@@ -7,6 +7,7 @@ const HomePage = () => {
 
   const theme = useTheme();
   const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
+  
 
   return (
     <Box>
