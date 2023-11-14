@@ -270,8 +270,8 @@ const registerSchema = yup.object().shape({
                 }}
               >
                 {isLogin
-                  ? "Don't have an account? Sign Up here."
-                  : "Already have an account? Login here."}
+                  ? "Don't have an account ? Sign Up"
+                  : "Already have an account ? Login"}
               </Typography>
             </Box>
           </form>
