@@ -1,8 +1,5 @@
 import {  ManageAccountsOutlined, EditOutlined, LocationOnOutlined, WorkOutlineOutlined, } from "@mui/icons-material";
 import { Box, Typography, Divider, useTheme } from "@mui/material";
-
-
-
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -48,7 +45,7 @@ const UserWidget = ({ userId, picturePath }) => {
 
   return (
     <Widgets>
-      {/* FIRST ROW */}
+      {/* 1st ROW */}
       <FlexBetween
         gap="0.5rem"
         pb="1.1rem"
@@ -78,7 +75,7 @@ const UserWidget = ({ userId, picturePath }) => {
 
       <Divider />
 
-      {/* SECOND ROW */}
+      {/* 2rd ROW */}
       <Box p="1rem 0">
         <Box display="flex" alignItems="center" gap="1rem" mb="0.5rem">
           <LocationOnOutlined fontSize="large" sx={{ color: main }} />
@@ -92,7 +89,7 @@ const UserWidget = ({ userId, picturePath }) => {
 
       <Divider />
 
-      {/* THIRD ROW */}
+      {/* 3rd ROW */}
       <Box p="1rem 0">
         <FlexBetween mb="0.5rem">
           <Typography color={medium}>Who's viewed your profile</Typography>
@@ -110,7 +107,7 @@ const UserWidget = ({ userId, picturePath }) => {
 
       <Divider />
 
-      {/* FOURTH ROW */}
+      {/* 4th ROW */}
       <Box p="1rem 0">
         <Typography fontSize="1rem" color={main} fontWeight="500" mb="1rem">
           Social Profiles

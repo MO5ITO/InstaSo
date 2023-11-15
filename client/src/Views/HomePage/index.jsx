@@ -1,24 +1,50 @@
-import { Box, Typography, useTheme, useMediaQuery } from "@mui/material";
-import NavBar from 'Views/NavBar'
+
+
+import { Box, useMediaQuery } from "@mui/material";
+import { useSelector } from "react-redux";
+
+
+
+import NavBar from "Views/NavBar";
+import { useTheme } from "@emotion/react";
 import UserWidget from "Views/Widgets/UserWidget";
-import React from 'react'
+
 
 const HomePage = () => {
 
   const theme = useTheme();
   const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
+  const { _id, picturePath } = useSelector((state) => state.user);
+  
   
 
   return (
     <Box>
-      <NavBar/>
-      <Box width={isNonMobileScreens ? "50%" : "93%"} p="2rem" m="2rem auto" borderRadius="1.5rem" backgroundColor={theme.palette.background.alt} >
-        <Typography fontWeight="500" textAlign="center" variant="h5" sx={{ mb: "1.5rem" }}>
-          NstaSo! Home Page
-        </Typography>
-        <UserWidget/>
+      <NavBar />
+      <Box
+        width="100%"
+        padding="2rem 6%"
+        display={isNonMobileScreens ? "flex" : "block"}
+        gap="0.5rem"
+        justifyContent="space-between"
+      >
+        <Box flexBasis={isNonMobileScreens ? "26%" : undefined}>
+          <UserWidget userId={_id} picturePath={picturePath} />
         </Box>
+        <Box
+          flexBasis={isNonMobileScreens ? "42%" : undefined}
+          mt={isNonMobileScreens ? undefined : "2rem"}
+        >
 
+        </Box>
+        {isNonMobileScreens && (
+          <Box flexBasis="26%">
+
+            <Box m="2rem 0" />
+
+          </Box>
+        )}
+      </Box>
     </Box>
   )
 }
