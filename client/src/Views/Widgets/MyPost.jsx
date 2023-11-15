@@ -45,10 +45,7 @@ const MyPost = ({ picturePath }) => {
       <WidgetWrapper>
         <FlexBetween gap="1.5rem">
           <UserImage image={picturePath} />
-          <InputBase
-            placeholder="What's on your mind..."
-            onChange={(e) => setPost(e.target.value)}
-            value={post}
+          <InputBase  placeholder="Write something here..." onChange={(e) => setPost(e.target.value)} value={post}
             sx={{
               width: "100%",
               backgroundColor: palette.neutral.light,
@@ -58,12 +55,7 @@ const MyPost = ({ picturePath }) => {
           />
         </FlexBetween>
         {isImage && (
-          <Box
-            border={`1px solid ${medium}`}
-            borderRadius="5px"
-            mt="1rem"
-            p="1rem"
-          >
+          <Box border={`1px solid ${medium}`} borderRadius="5px" mt="1rem" p="1rem" >
             <Dropzone
               acceptedFiles=".jpg,.jpeg,.png"
               multiple={false}
@@ -90,10 +82,7 @@ const MyPost = ({ picturePath }) => {
                     )}
                   </Box>
                   {image && (
-                    <IconButton
-                      onClick={() => setImage(null)}
-                      sx={{ paddingLeft:"15px" }}
-                    >
+                    <IconButton onClick={() => setImage(null)} sx={{ paddingLeft:"15px" }} >
                       <ClearIcon />
                     </IconButton>
                   )}
@@ -108,10 +97,7 @@ const MyPost = ({ picturePath }) => {
         <FlexBetween>
           <FlexBetween gap="0.25rem" onClick={() => setIsImage(!isImage)}>
             <ImageOutlined sx={{ color: mediumMain }} />
-            <Typography
-              color={mediumMain}
-              sx={{ "&:hover": { cursor: "pointer", color: medium } }}
-            >
+            <Typography color={mediumMain} sx={{ "&:hover": { cursor: "pointer", color: medium } }} >
               Click Here To Add Image
             </Typography>
           </FlexBetween>
