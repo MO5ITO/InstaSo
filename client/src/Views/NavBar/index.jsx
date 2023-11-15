@@ -2,6 +2,7 @@ import logo from '../../Assets/logo.png'
 import { useState } from "react";
 import { Box, IconButton, InputBase, Typography, Select, MenuItem, FormControl, useTheme, useMediaQuery, } from "@mui/material";
 import { Search, Message, DarkMode, LightMode, Notifications, Help, Menu, Close, } from "@mui/icons-material";
+import LogoutIcon from '@mui/icons-material/Logout';
 import { useDispatch, useSelector } from "react-redux";
 import { setMode, setLogout } from "../../State/index.js";
 import { Link } from "react-router-dom";
@@ -15,7 +16,6 @@ const NavBar = () => {
   const user = useSelector((state) => state.user);
   const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
   
-
   const theme = useTheme();
   const neutralLight = theme.palette.neutral.light;
   const dark = theme.palette.neutral.dark;
@@ -65,7 +65,7 @@ const NavBar = () => {
               value={fullName}
               sx={{
                 backgroundColor: neutralLight,
-                width: "150px",
+                width: "100%",
                 borderRadius: "0.25rem",
                 p: "0.25rem 1rem",
                 "& .MuiSvgIcon-root": {
@@ -81,7 +81,7 @@ const NavBar = () => {
               <MenuItem value={fullName}>
                 <Typography>{fullName}</Typography>
               </MenuItem>
-              <MenuItem onClick={() => dispatch(setLogout())}>Log Out</MenuItem>
+              <MenuItem onClick={() => dispatch(setLogout())}>Log Out <LogoutIcon className='ms-2'/> </MenuItem>
             </Select>
           </FormControl>
         </FlexBetween>
