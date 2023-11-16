@@ -1,5 +1,6 @@
 import { ChatBubbleOutlineOutlined, FavoriteBorderOutlined, FavoriteOutlined } from "@mui/icons-material";
 import ShareIcon from '@mui/icons-material/Share';
+import CommentOutlinedIcon from '@mui/icons-material/CommentOutlined';
 import { Box, Divider, IconButton, Typography, useTheme } from "@mui/material";
 import FlexBetween from "Components/FlexBetween";
 import Friends from "Components/Friends";
@@ -94,7 +95,7 @@ import { setPost } from "State";
               <Box key={`${name}-${i}`}>
                 <Divider />
                 <Typography sx={{ color: main, m: "0.5rem 0", pl: "1rem" }}>
-                  {comment}
+                  <CommentOutlinedIcon/>  {comment}
                 </Typography>
               </Box>
             ))}
