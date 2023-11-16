@@ -1,4 +1,4 @@
-import { EditOutlined, ImageOutlined, MicOutlined, MoreHorizOutlined, Height, } from "@mui/icons-material";
+import { EditOutlined, ImageOutlined } from "@mui/icons-material";
 import { Box, Divider, Typography, InputBase, useTheme, Button, IconButton, useMediaQuery, } from "@mui/material";
 import ClearIcon from '@mui/icons-material/Clear';
 import FlexBetween from "Components/FlexBetween";

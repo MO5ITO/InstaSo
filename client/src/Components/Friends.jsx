@@ -1,4 +1,5 @@
-import { PersonAddOutlined, PersonRemoveOutlined, LocationOnOutlined } from "@mui/icons-material";
+import { PersonAddOutlined, PersonRemoveOutlined } from "@mui/icons-material";
+import BadgeTwoToneIcon from '@mui/icons-material/BadgeTwoTone';
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -19,7 +20,8 @@ const Friends = ({ friendId, name, subtitle, userPicturePath }) => {
   const main = palette.neutral.main;
   const medium = palette.neutral.medium;
 
-  const isFriend = friends.find((friend) => friend._id === friendId);
+  const isFriend = Array.isArray(friends) && friends.find((friend) => friend._id === friendId);
+  
 
   const patchFriend = async () => {
     const response = await fetch(
@@ -60,10 +62,11 @@ const Friends = ({ friendId, name, subtitle, userPicturePath }) => {
             {name}
           </Typography>
           <Typography color={medium} fontSize="0.75rem">
-            <LocationOnOutlined/> {subtitle}
+            {subtitle} fffff
           </Typography>
         </Box>
       </FlexBetween>
+      {(friendId === _id) ? <BadgeTwoToneIcon/> : (
       <IconButton
         onClick={() => patchFriend()}
         sx={{ backgroundColor: primaryLight, p: "0.6rem" }}
@@ -73,7 +76,7 @@ const Friends = ({ friendId, name, subtitle, userPicturePath }) => {
         ) : (
           <PersonAddOutlined sx={{ color: primaryDark }} />
         )}
-      </IconButton>
+      </IconButton> )}
     </FlexBetween>
   );
 };

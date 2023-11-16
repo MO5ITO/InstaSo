@@ -1,9 +1,10 @@
 import { Box, useMediaQuery } from "@mui/material";
 import { useSelector } from "react-redux";
 import NavBar from "Views/NavBar";
+import FriendsList from "Views/Widgets/FriendsList";
 import MyPost from "Views/Widgets/MyPost";
-import PostsWidget from "Views/Widgets/MyPost";
 import ShowAllPosts from "Views/Widgets/ShowAllPosts";
+import SideBarRight from "Views/Widgets/SideBarRight";
 import UserWidget from "Views/Widgets/UserWidget";
 
 
@@ -26,18 +27,19 @@ const HomePage = () => {
       >
         <Box flexBasis={isNonMobileScreens ? "26%" : undefined}>
           <UserWidget userId={_id} picturePath={picturePath} />
+          <Box m="2rem 0" />
+          <FriendsList/>
         </Box>
         <Box
           flexBasis={isNonMobileScreens ? "42%" : undefined}
           mt={isNonMobileScreens ? undefined : "2rem"}
         >
           <MyPost picturePath={picturePath}/>
-          <ShowAllPosts/>
+          <ShowAllPosts userId={_id}/>
         </Box>
         {isNonMobileScreens && (
           <Box flexBasis="26%">
-
-            <Box m="2rem 0" />
+            <SideBarRight/>
 
           </Box>
         )}

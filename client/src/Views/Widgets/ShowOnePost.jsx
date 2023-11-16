@@ -3,7 +3,7 @@ import ShareIcon from '@mui/icons-material/Share';
 import { Box, Divider, IconButton, Typography, useTheme } from "@mui/material";
 import FlexBetween from "Components/FlexBetween";
 import Friends from "Components/Friends";
-import WidgetWrapper from "Components/Widgets";
+import Widgets from "Components/Widgets";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setPost } from "State";
@@ -44,7 +44,7 @@ import { setPost } from "State";
     };
   
     return (
-      <WidgetWrapper m="2rem 0">
+      <Widgets m="2rem 0">
         <Friends
           friendId={postUserId}
           name={name}
@@ -101,7 +101,7 @@ import { setPost } from "State";
             <Divider />
           </Box>
         )}
-      </WidgetWrapper>
+      </Widgets>
     );
   };
   
