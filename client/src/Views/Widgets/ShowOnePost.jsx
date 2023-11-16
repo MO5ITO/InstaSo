@@ -1,11 +1,12 @@
-import { ChatBubbleOutlineOutlined, FavoriteBorderOutlined, FavoriteOutlined, ShareOutlined, } from "@mui/icons-material";
-  import { Box, Divider, IconButton, Typography, useTheme } from "@mui/material";
-  import FlexBetween from "Components/FlexBetween";
-  import Friend from "Components/Friend";
-  import WidgetWrapper from "Components/Widgets";
-  import { useState } from "react";
-  import { useDispatch, useSelector } from "react-redux";
-  import { setPost } from "State";
+import { ChatBubbleOutlineOutlined, FavoriteBorderOutlined, FavoriteOutlined } from "@mui/icons-material";
+import ShareIcon from '@mui/icons-material/Share';
+import { Box, Divider, IconButton, Typography, useTheme } from "@mui/material";
+import FlexBetween from "Components/FlexBetween";
+import Friends from "Components/Friends";
+import WidgetWrapper from "Components/Widgets";
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setPost } from "State";
   
   const ShowOnePost = ({
     postId,
@@ -44,7 +45,7 @@ import { ChatBubbleOutlineOutlined, FavoriteBorderOutlined, FavoriteOutlined, Sh
   
     return (
       <WidgetWrapper m="2rem 0">
-        <Friend
+        <Friends
           friendId={postUserId}
           name={name}
           subtitle={location}
@@ -84,7 +85,7 @@ import { ChatBubbleOutlineOutlined, FavoriteBorderOutlined, FavoriteOutlined, Sh
           </FlexBetween>
   
           <IconButton>
-            <ShareOutlined />
+            <ShareIcon/>
           </IconButton>
         </FlexBetween>
         {isComments && (
