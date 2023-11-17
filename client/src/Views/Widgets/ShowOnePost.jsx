@@ -1,13 +1,14 @@
 import { ChatBubbleOutlineOutlined, FavoriteBorderOutlined, FavoriteOutlined } from "@mui/icons-material";
 import ShareIcon from '@mui/icons-material/Share';
 import CommentOutlinedIcon from '@mui/icons-material/CommentOutlined';
-import { Box, Divider, IconButton, Typography, useTheme } from "@mui/material";
+import { Box, Divider, IconButton, Typography, useTheme,InputBase } from "@mui/material";
 import FlexBetween from "Components/FlexBetween";
 import Friends from "Components/Friends";
 import Widgets from "Components/Widgets";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setPost } from "State";
+import ProfilePicture from "Components/ProfilePicture";
   
   const ShowOnePost = ({
     postId,
@@ -97,11 +98,24 @@ import { setPost } from "State";
                 <Typography sx={{ color: main, m: "0.5rem 0", pl: "1rem" }}>
                   <CommentOutlinedIcon/>  {comment}
                 </Typography>
+                <Divider />
               </Box>
             ))}
             <Divider />
           </Box>
         )}
+        <Divider />
+        <FlexBetween gap="1.5rem" mt="15px">
+                    <ProfilePicture image={picturePath}/>
+                    <InputBase  placeholder="Write Comment here..." 
+                        sx={{
+                        width: "90%",
+                        backgroundColor: palette.neutral.light,
+                        borderRadius: "1.5rem",
+                        padding: "0.7rem 2rem",
+                        }}
+                    />
+        </FlexBetween>
       </Widgets>
     );
   };

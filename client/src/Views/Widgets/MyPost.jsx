@@ -3,8 +3,8 @@ import { Box, Divider, Typography, InputBase, useTheme, Button, IconButton, useM
 import ClearIcon from '@mui/icons-material/Clear';
 import FlexBetween from "Components/FlexBetween";
 import Dropzone from "react-dropzone";
-import UserImage from "Components/ProfilePicture";
-import WidgetWrapper from "Components/Widgets";
+import ProfilePicture from "Components/ProfilePicture";
+import Widgets from "Components/Widgets";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setPosts } from "State";
@@ -42,9 +42,9 @@ const MyPost = ({ picturePath }) => {
     };
   
     return (
-      <WidgetWrapper>
+      <Widgets>
         <FlexBetween gap="1.5rem">
-          <UserImage image={picturePath} />
+          <ProfilePicture image={picturePath} />
           <InputBase  placeholder="Write something here..." onChange={(e) => setPost(e.target.value)} value={post}
             sx={{
               width: "100%",
@@ -114,7 +114,7 @@ const MyPost = ({ picturePath }) => {
             Add POST
           </Button>
         </FlexBetween>
-      </WidgetWrapper>
+      </Widgets>
     );
   };
   
