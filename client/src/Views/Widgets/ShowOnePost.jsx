@@ -1,5 +1,5 @@
 import { ChatBubbleOutlineOutlined, FavoriteBorderOutlined, FavoriteOutlined } from "@mui/icons-material";
-import ShareIcon from '@mui/icons-material/Share';
+import AddBoxOutlinedIcon from '@mui/icons-material/AddBoxOutlined';import ShareIcon from '@mui/icons-material/Share';
 import CommentOutlinedIcon from '@mui/icons-material/CommentOutlined';
 import { Box, Divider, IconButton, Typography, useTheme,InputBase } from "@mui/material";
 import FlexBetween from "Components/FlexBetween";
@@ -117,6 +117,7 @@ import ProfilePicture from "Components/ProfilePicture";
                         padding: "0.7rem 2rem",
                         }}
                     />
+                    <IconButton><AddBoxOutlinedIcon/></IconButton>
         </FlexBetween>
       </Widgets>
     );
