@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 
-const ProfilePicture = ({ image, size = "60px" }) => {
+const ProfilePicture = ({ image, size = "50px" }) => {
   return (
     <Box width={size} height={size}>
       <img

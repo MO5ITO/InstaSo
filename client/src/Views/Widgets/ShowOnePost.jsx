@@ -25,6 +25,8 @@ import ProfilePicture from "Components/ProfilePicture";
     const dispatch = useDispatch();
     const token = useSelector((state) => state.token);
     const loggedInUserId = useSelector((state) => state.user._id);
+    const userNameLogin = useSelector((state) => state.user.firstName);
+    const userPicturePathLogin = useSelector((state) => state.user.picturePath);
     const isLiked = Boolean(likes[loggedInUserId]);
     const likeCount = Object.keys(likes).length;
   
@@ -106,10 +108,10 @@ import ProfilePicture from "Components/ProfilePicture";
         )}
         <Divider />
         <FlexBetween gap="1.5rem" mt="15px">
-                    <ProfilePicture image={picturePath}/>
-                    <InputBase  placeholder="Write Comment here..." 
+                    <ProfilePicture image={userPicturePathLogin}/> 
+                    <InputBase  placeholder=" Write Comment here..." 
                         sx={{
-                        width: "90%",
+                        width: "100%",
                         backgroundColor: palette.neutral.light,
                         borderRadius: "1.5rem",
                         padding: "0.7rem 2rem",
