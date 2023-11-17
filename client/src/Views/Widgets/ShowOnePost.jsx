@@ -109,7 +109,7 @@ import ProfilePicture from "Components/ProfilePicture";
         <Divider />
         <FlexBetween gap="1.5rem" mt="15px">
                     <ProfilePicture image={userPicturePathLogin}/> 
-                    <InputBase  placeholder=" Write Comment here..." 
+                    <InputBase  placeholder=" Write A Comment here..." 
                         sx={{
                         width: "100%",
                         backgroundColor: palette.neutral.light,
