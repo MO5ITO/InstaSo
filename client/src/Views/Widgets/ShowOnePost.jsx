@@ -111,7 +111,7 @@ import ProfilePicture from "Components/ProfilePicture";
                     <ProfilePicture image={userPicturePathLogin}/> 
                     <InputBase  placeholder=" Write A Comment here..." 
                         sx={{
-                        width: "100%",
+                        width: "98%",
                         backgroundColor: palette.neutral.light,
                         borderRadius: "1.5rem",
                         padding: "0.7rem 2rem",
