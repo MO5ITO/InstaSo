@@ -43,13 +43,13 @@ const FriendsList = ({ userId }) => {
       <Box display="flex" flexDirection="column" gap="1.5rem">
         {Array.isArray(friends) &&
             friends.map((friend) => (
-            <Friends
-                key={friend._id}
-                friendId={friend._id}
-                name={`${friend.firstName} ${friend.lastName}`}
-                subtitle={friend.occupation}
-                userPicturePath={friend.picturePath}
-            />
+                <Friends
+                    key={friend._id}
+                    friendId={friend._id}
+                    name={`${friend.firstName} ${friend.lastName}`}
+                    subtitle={friend.occupation}
+                    userPicturePath={friend.picturePath}
+                />
             ))}
         </Box>
 
