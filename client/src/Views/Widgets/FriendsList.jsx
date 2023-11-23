@@ -3,7 +3,6 @@ import Friends from "Components/Friends";
 import Widgets from "Components/Widgets";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import { setFriends } from "State";
 
 const FriendsList = ({ userId }) => {
