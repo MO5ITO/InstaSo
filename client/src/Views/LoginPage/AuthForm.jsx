@@ -203,7 +203,7 @@ const registerSchema = yup.object().shape({
                         >
                           <input {...getInputProps()} />
                           {!values.picture ? (
-                            <Typography> <AddPhotoAlternateIcon  sx={{ fontSize: 40 }}/> Add Your Profile Picture 🤗</Typography>
+                            <Typography> <AddPhotoAlternateIcon  sx={{ fontSize: 40 }}/> Add Your Profile Picture 🤗 </Typography>
                           ) : (
                             <FlexBetween>
                               <Typography><CheckCircleSharpIcon sx={{ fontSize: 30 }} htmlColor={palette.primary.main}/> You Are Choose This Picture Name : {values.picture.name}</Typography>
