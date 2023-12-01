@@ -104,8 +104,7 @@ const registerSchema = yup.object().shape({
         <div className="container py-5">
           <div className="row d-flex align-items-center justify-content-center">
             <div className="col-md-8 col-lg-7 col-xl-6 pageCenter mb-3">
-              <img src={loginImg}
-                className="img-fluid" alt="Login Img"/>
+              <img src={loginImg} className="img-fluid" alt="Login Img"/>
             </div>
             <div className="col-md-8 col-lg-5 col-xl-5 offset-xl-1">
 
