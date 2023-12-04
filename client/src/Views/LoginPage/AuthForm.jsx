@@ -106,7 +106,7 @@ const registerSchema = yup.object().shape({
             <div className="col-md-8 col-lg-7 col-xl-6 pageCenter mb-3">
               <img src={loginImg} className="img-fluid" alt="Login Img"/>
             </div>
-            <div className="col-md-8 col-lg-5 col-xl-5 offset-xl-1">
+          <div className="col-md-8 col-lg-5 col-xl-5 offset-xl-1">
 
             <Formik
         onSubmit={handleFormSubmit}
