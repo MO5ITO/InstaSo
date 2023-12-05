@@ -107,7 +107,6 @@ const registerSchema = yup.object().shape({
               <img src={loginImg} className="img-fluid" alt="Login Img"/>
             </div>
           <div className="col-md-8 col-lg-5 col-xl-5 offset-xl-1">
-
             <Formik
         onSubmit={handleFormSubmit}
         initialValues={isLogin ? initialValuesLogin : initialValuesRegister}
