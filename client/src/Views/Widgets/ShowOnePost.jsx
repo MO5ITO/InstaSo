@@ -108,16 +108,16 @@ import ProfilePicture from "Components/ProfilePicture";
         )}
         <Divider />
         <FlexBetween gap="1.5rem" mt="15px">
-                    <ProfilePicture image={userPicturePathLogin}/> 
-                    <InputBase  placeholder=" Write A Comment here..." 
+            <ProfilePicture image={userPicturePathLogin}/> 
+            <InputBase  placeholder=" Write A Comment here..." 
                         sx={{
                         width: "98%",
                         backgroundColor: palette.neutral.light,
                         borderRadius: "1.5rem",
                         padding: "0.7rem 2rem",
-                        }}
-                    />
-                    <IconButton><AddBoxOutlinedIcon/></IconButton>
+                        }}/>
+                        
+            <IconButton><AddBoxOutlinedIcon/></IconButton>
         </FlexBetween>
       </Widgets>
     );
