@@ -49,15 +49,8 @@ import ProfilePicture from "Components/ProfilePicture";
   
     return (
       <Widgets m="2rem 0">
-        <Friends
-          friendId={postUserId}
-          name={name}
-          subtitle={location}
-          userPicturePath={userPicturePath}
-        />
-        <Typography color={main} sx={{ mt: "1rem" }}>
-          {description}
-        </Typography>
+        <Friends friendId={postUserId} name={name} subtitle={location} userPicturePath={userPicturePath} />
+        <Typography color={main} sx={{ mt: "1rem" }}> {description} </Typography>
         {picturePath && (
           <img width="100%" height="auto" alt="post" style={{ borderRadius: "0.75rem", marginTop: "0.75rem" }} 
                 src={`http://localhost:3001/assets/${picturePath}`} /> )}
