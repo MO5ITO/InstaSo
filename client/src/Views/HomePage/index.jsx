@@ -1,7 +1,6 @@
 import { Box, useMediaQuery } from "@mui/material";
 import { useSelector } from "react-redux";
 import NavBar from "Views/NavBar";
-import FriendsList from "Views/Widgets/FriendsList";
 import MyPost from "Views/Widgets/MyPost";
 import ShowAllPosts from "Views/Widgets/ShowAllPosts";
 import SideBarRight from "Views/Widgets/SideBarRight";
