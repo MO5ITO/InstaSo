@@ -10,7 +10,6 @@ const FriendsList = ({ userId }) => {
   const { palette } = useTheme();
   const token = useSelector((state) => state.token);
   const friends = useSelector((state) => state.user.friends);
-  
 
   const getFriends = async () => {
     const response = await fetch(
@@ -31,19 +30,13 @@ const FriendsList = ({ userId }) => {
 
   return (
     <Widgets>
-      <Typography
-        color={palette.neutral.dark}
-        variant="h5"
-        fontWeight="500"
-        sx={{ mb: "1.5rem" }}
-      >
+      <Typography color={palette.neutral.dark} variant="h5" fontWeight="500" sx={{ mb: "1.5rem" }}>
         Friend List
       </Typography>
       <Box display="flex" flexDirection="column" gap="1.5rem">
         {Array.isArray(friends) &&
             friends.map((friend) => (
-                <Friends
-                    key={friend._id}
+                <Friends key={friend._id}
                     friendId={friend._id}
                     name={`${friend.firstName} ${friend.lastName}`}
                     subtitle={friend.occupation}
