@@ -36,6 +36,7 @@ const ShowAllPosts = ({ userId, isProfile = false }) => {
         getPosts();
       }
     }, []); 
+    
   
     return (
       <>
