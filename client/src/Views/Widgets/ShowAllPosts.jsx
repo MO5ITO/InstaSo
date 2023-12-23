@@ -37,9 +37,8 @@ const ShowAllPosts = ({ userId, isProfile = false }) => {
       }
     }, []); 
 
-  
     return (
-      
+
       <>
         {[...posts].reverse().map(
           ({
