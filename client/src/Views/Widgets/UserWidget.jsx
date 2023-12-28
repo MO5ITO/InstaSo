@@ -8,6 +8,7 @@ import FlexBetween from "Components/FlexBetween";
 import ProfilePicture from "Components/ProfilePicture";
 
 const UserWidget = ({ userId, picturePath }) => {
+  
   const [user, setUser] = useState(null);
   const { palette } = useTheme();
   const navigate = useNavigate();
