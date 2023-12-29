@@ -6,6 +6,7 @@ import ShowAllPosts from "Views/Widgets/ShowAllPosts";
 import SideBarRight from "Views/Widgets/SideBarRight";
 import UserWidget from "Views/Widgets/UserWidget";
 
+
 const HomePage = () => {
 
   const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
