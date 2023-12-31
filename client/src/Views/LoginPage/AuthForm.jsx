@@ -279,8 +279,7 @@ const registerSchema = yup.object().shape({
           </div>
         </div>
       </section>
-
-
+      
     );
   };
 
