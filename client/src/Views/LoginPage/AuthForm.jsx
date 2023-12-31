@@ -15,7 +15,7 @@ import loginImg from "../../Assets/loginRegister.jpg"
 const registerSchema = yup.object().shape({
     firstName: yup.string().required("First Name is required"),
     lastName: yup.string().required("Last Name is required"),
-    email: yup.string().email("invalid email").required("Email Adress is required"),
+    email: yup.string().email("invalid email").required("Email Address is required"),
     password: yup.string().required("Password is required"),
     location: yup.string().required("Location is required"),
     occupation: yup.string().required("Occupation is required"),
@@ -279,7 +279,7 @@ const registerSchema = yup.object().shape({
           </div>
         </div>
       </section>
-      
+
     );
   };
 
