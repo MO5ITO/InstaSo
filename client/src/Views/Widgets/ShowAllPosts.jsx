@@ -70,4 +70,5 @@ const ShowAllPosts = ({ userId, isProfile = false }) => {
     );
   };
   
+  
   export default ShowAllPosts;
