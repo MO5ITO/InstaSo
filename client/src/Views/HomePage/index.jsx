@@ -21,6 +21,7 @@ const HomePage = () => {
           <Box m="2rem 0" />
           {/* <FriendsList/> */}
         </Box>
+        
         <Box
           flexBasis={isNonMobileScreens ? "42%" : undefined}
           mt={isNonMobileScreens ? undefined : "2rem"}
