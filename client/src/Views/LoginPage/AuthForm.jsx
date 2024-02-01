@@ -12,7 +12,6 @@ import Dropzone from "react-dropzone";
 import FlexBetween from "../../Components/FlexBetween";
 import loginImg from "../../Assets/loginRegister.jpg"
 
-
 const registerSchema = yup.object().shape({
     firstName: yup.string().required("First Name is required"),
     lastName: yup.string().required("Last Name is required"),
@@ -23,7 +22,6 @@ const registerSchema = yup.object().shape({
     picture: yup.string().required("Picture is required"),
   });
   
-
   const loginSchema = yup.object().shape({
     email: yup.string().email("invalid email").required("Email is required"),
     password: yup.string().required("Password is required"),
