@@ -166,7 +166,6 @@ const NavBar = () => {
 
     </FlexBetween>
 
-
     </div>
   )
 }
