@@ -50,3 +50,4 @@ const FriendsList = ({ userId }) => {
 };
 
 export default FriendsList;
+
